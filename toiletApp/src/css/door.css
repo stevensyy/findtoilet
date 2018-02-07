@@ -1,0 +1,61 @@
+.door {
+  position: relative;
+  width: 50%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  top: calc(25% - 15px);
+}
+.door-frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ececd6;
+  border: 5px solid rgb(45, 26, 26);
+  border-bottom: 5px solid rgb(45, 26, 26);
+  border-left: 5px solid rgb(54, 17, 17);
+  box-shadow: 0 0 0 2px #C7C3C3, 0 0 0 5px #E6E2E2;
+  text-align: center;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eaeab2+0,eaeab2+31,e8e8c0+55,c5e5e4+100 */
+background: #eaeab2; /* Old browsers */
+background: -moz-linear-gradient(top, #eaeab2 0%, #eaeab2 31%, #e8e8c0 55%, #c5e5e4 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #eaeab2 0%,#eaeab2 31%,#e8e8c0 55%,#c5e5e4 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #eaeab2 0%,#eaeab2 31%,#e8e8c0 55%,#c5e5e4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeab2', endColorstr='#c5e5e4',GradientType=0 ); /* IE6-9 */
+}
+.door-open {
+  position: absolute;
+  height: 100%;
+  border-top: 2px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 108px solid rgb(54, 17, 17);
+  border-right: 15px solid transparent;
+  
+}
+.inner-door-knob {
+  width: 10px;
+  height: 5px;
+  border-radius: 6px;
+  background-color: #965322;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+
+.door:hover .door-open {
+  animation: door-opening 1s ease forwards;
+}
+.noPeople {
+  animation: door-opening 1s ease forwards;
+}
+@keyframes door-opening {
+  0% {
+    -webkit-transform: perspective(500) rotateY(-5deg);
+    -webkit-transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: perspective(500) rotateY(-105deg);
+    -webkit-transform-origin: 0% 0%;
+  }
+}
+

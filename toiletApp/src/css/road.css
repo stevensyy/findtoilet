@@ -1,0 +1,29 @@
+.road {
+  width: 350%;
+  height: 130px;
+  background-color: #585858;
+  border-top: 10px solid #756D6D;
+  border-bottom: 10px solid #756D6D;
+  position: relative;
+  display: inline-block;
+  margin-left: -10px;
+  padding: 0;
+}
+.road::before {
+  content: " ";
+  position: absolute;
+  z-index: 0;
+  top: -10px;
+  left: 0px;
+  right: 0px;
+  border: 2px solid black;
+}
+.road-top-half {
+  height: 30px;
+  width: 250%;
+  position: absolute;
+  left: -10%;
+  top: 20px;
+  border-top: 20px dashed white;
+  margin-top: 25px;
+}

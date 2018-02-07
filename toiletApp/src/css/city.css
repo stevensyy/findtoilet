@@ -1,0 +1,11 @@
+.city{
+  position: absolute;
+  width:100%;
+  z-index: -1;
+}
+.cityBackground{
+  height: 478px;
+  width:100%;
+  background-image: url("../img/city.png");
+  background-repeat: repeat repeat;
+}

@@ -1,0 +1,147 @@
+.container {
+  position: absolute;
+  right: 3%;
+  top: 25%;
+  text-align: center;
+}
+.bulb-light {
+  position: relative;
+  border: 0;
+  background: transparent;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: block;
+  z-index: 1;
+}
+
+.light {
+  opacity: 1; 
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+	border-radius: 200px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 5;
+}
+
+.bulb { 
+  opacity: 1;
+  z-index: 3;
+}
+
+.bulb-top {
+  position: relative;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0;
+	border-radius: 200px;
+  background: #E7E7E7;
+  box-shadow: inset 0px 10px 3px -1px rgba(10,30,60,0.1);  
+}
+
+.reflection {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(255,255,255,0.8);
+  width: 8px;
+  height: 8px;
+	border-radius: 200px 80px;
+}
+
+.bulb-middle-1 {
+  margin: -15px auto 0 auto;
+  width: 20px;
+	height: 0;
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-top: 18px solid #E7E7E7;
+}
+
+.bulb-bottom {
+  width: 20px;
+  height: 13px;
+  margin: -8px auto 0 auto;
+  padding: 0;
+	border-radius: 0 0 200px 200px;
+  background: #E7E7E7;
+  box-shadow: inset 0px -10px 14px -7px rgba(10,30,60,0.1); 
+}
+
+.base {
+  position: relative;
+  z-index: 2;
+}
+
+.screw-top {
+  margin: -5px auto;
+  padding: 0;
+  width: 18px; 
+	height: 0; 
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 10px solid #D3D3D3;
+	border-radius: 4px;
+}
+
+.screw-d {
+  margin: 5px auto;
+  padding: 0;
+  width: 10px; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 3px solid #444;
+}
+
+
+.bulb-lighting {
+  animation: bulb-top-bottom 1s ease-out infinite;
+}
+.bulb-middle-animate {
+  animation: bulb-middle 1s ease-out infinite;
+}
+.isLighting {
+  animation: lighting 1s ease-out infinite;
+}
+@keyframes bulb-top-bottom {
+  0% {
+    background: #E7E7E7(255, 255, 255);
+  }
+  50% {
+    background: #FE3;
+  }
+  100% {
+    background: #E7E7E7(255, 255, 255);
+  }
+}
+@keyframes bulb-middle {
+  0% {
+    border-top: 18px solid #E7E7E7;
+  }
+  50% {
+    border-top: 18px solid #FE3;
+  }
+  100% {
+    border-top: 18px solid #E7E7E7;
+  }
+}
+@keyframes lighting {
+  0% {
+    opacity: 0; 
+    box-shadow: 0px 0px 100px rgba(255,210,00,0), inset 0px 0px 100px 18px rgba(255,210,00,0.42);   }
+  50% {
+    opacity: 1; 
+    box-shadow: 0px 0px 80px rgba(255,210,00,1), inset 0px 0px 100px 18px rgba(255,210,00,0.42);   }
+  100% {
+    opacity: 0; 
+    box-shadow: 0px 0px 100px rgba(255,210,00,0), inset 0px 0px 100px 18px rgba(255,210,00,0.42); 
+  }
+}

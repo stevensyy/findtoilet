@@ -1,0 +1,10 @@
+.room {
+  display: inline-block;
+  /* border: solid 1px #71A4CA; */
+  /* background-color: #1F1818; */
+  position: relative;
+  height: 190px;
+  width: 225px; 
+  margin-left: 25px;
+  margin-top: 25px;
+}

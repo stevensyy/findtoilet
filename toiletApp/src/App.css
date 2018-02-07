@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  /* border: solid 2px black; */
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+/*----------*/
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-end;
+}
+.logo{
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo img{
+  vertical-align: middle;
+}
+.logo h1{
+  margin: 0px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body {
+overflow: hidden;
+background: linear-gradient(180deg, #09283d, #1b415c, #29516c, #6e8ea5, #7cadd0, #7cadd0, #7cadd0, #7cadd0, #6e8ea5, #3a6583, #1a4461, #09283d);
+background-size: 2400% 2400%;
+animation: dayNight  60s ease infinite;
+position: relative;
+}
+
+@keyframes dayNight {
+0%{background-position:25% 0%}
+50%{background-position:76% 100%}
+100%{background-position:25% 0%}
+}
+
+@keyframes moon {
+50% {
+transform: translateY(-20px);
+}
+100% {
+transform: translate(80px, -140px);
+}
+}
+@keyframes sun-moon {
+from { transform:rotate(0deg); }
+to { transform:rotate(360deg); }
+}
+
+.moon {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: rgb(207, 207, 212);
+  margin: auto;
+  box-shadow: 0 0 60px gold, 0 0 100px rgb(185, 160, 24), inset 0 5px 12px 26px #F5F5F5, inset -2px 8px 15px 36px #E6E6DB;
+  transition: 1s;
+  transition: 1s;
+  right:370px;
+  top: 30px;
+  position: absolute;
+  animation: sun-moon 40s  2s linear infinite;
+  transform-origin: 50% 500px;
+}
