@@ -1,0 +1,9 @@
+Prerequisite:
+    pip install statistics
+
+Run:
+    python rrubd.py --id B3FA --criterion 3.5 
+    
+AutoRun:
+    Add the following task to Cron Job
+    @reboot /home/pi/findtoilet/client/rrubd.py --id B3FA --criterion 3.5   
